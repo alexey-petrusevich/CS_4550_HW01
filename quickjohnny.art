@@ -1,0 +1,12 @@
+server {
+	listen 80;
+	listen [::]:80;
+
+	root /home/alexey/www/main;
+	index index.html;
+	server_name quickjohnny.art www.quickjohnny.art;
+	
+	location / {
+		try_files $uri $uri/ =404;
+	}
+}
